@@ -1,0 +1,94 @@
+.slides {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    cursor: pointer;
+}
+
+.slides::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 15;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.slides:hover::after {
+    opacity: 1;
+}
+
+.image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: cycle 1.5s linear infinite 0s forwards;
+    animation-play-state: paused;
+}
+
+.slides:hover .image {
+    animation-play-state: running;
+}
+
+.image1 {
+    z-index: 10;
+}
+
+.image2 {
+    z-index: 9;
+    animation-delay: 0.15s;
+}
+
+.image3 {
+    z-index: 8;
+    animation-delay: 0.3s;
+}
+
+.image4 {
+    z-index: 7;
+    animation-delay: 0.45s;
+}
+
+.image5 {
+    z-index: 6;
+    animation-delay: 0.6s;
+}
+
+.image6 {
+    z-index: 5;
+    animation-delay: 0.75s;
+}
+
+.image7 {
+    z-index: 4;
+    animation-delay: 0.9s;
+}
+
+.image8 {
+    z-index: 3;
+    animation-delay: 1.05s;
+}
+
+.image9 {
+    z-index: 2;
+    animation-delay: 1.2s;
+}
+
+.image10 {
+    z-index: 1;
+    animation-delay: 1.35s;
+}
+
+@keyframes cycle {
+    from {
+        visibility: visible;
+        z-index: 11;
+    }
+
+    to {
+        visibility: hidden;
+        z-index: 0;
+    }
+}
